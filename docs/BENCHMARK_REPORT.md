@@ -113,8 +113,6 @@ The recorded timings generally increase with the number of elements for operatio
 
 The C++ reshape changes shape metadata after validating the element count. PyTorch reshape may return a view or a copy depending on layout. Likewise, C++ getElement/setElement calls and Python tensor indexing plus scalar extraction are not equivalent low-level memory-access measurements.
 
-Before drawing performance conclusions, revise the C++ arithmetic benchmark so every output contributes to an observable checksum or equivalent validation outside the timed region, while ensuring the compiler cannot remove the computation. Then rerun both implementations using equivalent input data, output consumption, and timing boundaries.
-
 ## 6. Limitations
 
 1. C++ and Python reference measurements compare complete library/API usage, not programming languages in isolation.
@@ -131,9 +129,3 @@ The image measurements show lower execution times for the OpenCV reference imple
 The Tensor measurements provide an initial baseline across four tensor sizes. They require a corrected arithmetic benchmark before a reliable performance conclusion can be made.
 
 The project demonstrates the implementation and measurement of contiguous tensor storage, element-wise arithmetic, BMP loading and saving, and common image filters. Future work should focus on equivalent benchmark workloads, preventing compiler optimization from removing measured work, and improving the image algorithms' performance.
-
-## 8. Reproducibility
-
-The original benchmark CSV files are retained separately. The comparison CSV files and generated charts in this report package are derived from those uploaded CSVs.
-
-The benchmark scripts require their corresponding Python dependencies to be installed in the environment before rerunning.

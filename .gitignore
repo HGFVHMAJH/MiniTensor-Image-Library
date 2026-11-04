@@ -1,0 +1,8 @@
+build/
+.venv/
+__pycache__/
+*.exe
+image_filters
+benchmarks/image_benchmark
+benchmarks/tensor_benchmark
+benchmarks/results/*temp*.bmp

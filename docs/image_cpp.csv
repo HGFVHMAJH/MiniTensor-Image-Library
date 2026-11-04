@@ -1,0 +1,10 @@
+operation,width,height,repetitions,median_ms
+loading,600,400,15,1.47388
+grayscale,600,400,15,1.4751
+horizontal_reflection,600,400,15,0.847852
+vertical_flip,600,400,15,0.732867
+blur,600,400,15,7.38946
+edges,600,400,15,14.1903
+sepia,600,400,15,3.64859
+brightness,600,400,15,3.2343
+saving,600,400,15,3.48374

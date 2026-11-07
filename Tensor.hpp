@@ -139,7 +139,7 @@ public:
         return result;
     }
 
-    // Element-wise (Hadamard) multiplication, not matrix multiplication.
+    // Element-wise multiplication
     Tensor<T> operator*(const Tensor<T>& other) const
     {
         requireSameShape(other, "Element-wise multiplication");
@@ -147,6 +147,36 @@ public:
         for (std::size_t i = 0; i < data_.size(); ++i)
             result.data_[i] = data_[i] * other.data_[i];
         return result;
+    }
+
+    // Adds two tensors and stores the result in the current Tensor.
+    // Does not create a new Tensor.
+    void addInto(const Tensor<T>& a, const Tensor<T>& b)
+    {
+        requireSameShape(a, "Addition");
+        a.requireSameShape(b, "Addition");
+        for (std::size_t i = 0; i < data_.size(); ++i)
+            data_[i] = a.data_[i] + b.data_[i];
+    }
+
+    // Subtract two tensors and stores the result in the current Tensor.
+    // Does not create a new Tensor.
+    void subtractInto(const Tensor<T>& a, const Tensor<T>& b)
+    {
+        requireSameShape(a, "Subtraction");
+        a.requireSameShape(b, "Subtraction");
+        for (std::size_t i = 0; i < data_.size(); ++i)
+            data_[i] = a.data_[i] - b.data_[i];
+    }
+
+    // Performs element wise multiplication of two tensors and stores the result in the current Tensor.
+    // Does not create a new Tensor.
+    void multiplyInto(const Tensor<T>& a, const Tensor<T>& b)
+    {
+        requireSameShape(a, "Multiplication");
+        a.requireSameShape(b, "Multiplication");
+        for (std::size_t i = 0; i < data_.size(); ++i)
+            data_[i] = a.data_[i] * b.data_[i];
     }
 };
 

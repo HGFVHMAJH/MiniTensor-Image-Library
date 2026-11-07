@@ -84,3 +84,5 @@ The tensor supports element access, filling, reshape, addition, subtraction, and
 
 See [Benchmark Report](docs/BENCHMARK_REPORT.md) for detailed
 performance comparisons with PyTorch and OpenCV.
+
+See [Benchmark Report](benchmark_tensor.md) for Tensor operation.

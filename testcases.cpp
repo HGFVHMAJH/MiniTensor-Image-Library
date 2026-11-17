@@ -1,4 +1,3 @@
-
 #include "Tensor.hpp"
 
 #include <iostream>

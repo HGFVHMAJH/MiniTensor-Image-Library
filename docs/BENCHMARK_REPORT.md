@@ -113,7 +113,31 @@ The recorded timings generally increase with the number of elements for operatio
 
 The C++ reshape changes shape metadata after validating the element count. PyTorch reshape may return a view or a copy depending on layout. Likewise, C++ getElement/setElement calls and Python tensor indexing plus scalar extraction are not equivalent low-level memory-access measurements.
 
-## 6. Limitations
+## 6. Test Results
+
+The project includes functional test results for the Mini Tensor library.
+
+The test suite covers:
+- Tensor creation and initialization
+- Element indexing and modification
+- Addition and subtraction
+- Element-wise multiplication
+- Matrix multiplication support status
+- Tensor reshaping
+- Memory allocation and copy behaviour
+
+Test results are exported in CSV format using the required submission columns.
+
+**Results file:** [View Functional Test Results](testcase_result.csv)
+
+## Summary Table
+
+| Category | Total | Passed | Failed | Not supported | Remarks |
+|---|---:|---:|---:|---:|---|
+| Functional tests | 50 | 41 | 0 | 9 | - |
+| Performance benchmarks | 12 core benchmark IDs + scaling configurations | 9 | 0 | 3 | Matrix Multiplication not supported |
+
+## 7. Limitations
 
 1. C++ and Python reference measurements compare complete library/API usage, not programming languages in isolation.
 2. The Tensor arithmetic results are preliminary because of possible compiler dead-code elimination.
@@ -122,7 +146,7 @@ The C++ reshape changes shape metadata after validating the element count. PyTor
 5. Results are from one Codespaces environment and one 600 × 400 BMP image; different hardware, image sizes, compiler versions, and library builds may produce different timings.
 6. Median timings are reported; the source CSVs also include average timings where available.
 
-## 7. Conclusion
+## 8. Conclusion
 
 The image measurements show lower execution times for the OpenCV reference implementation across all tested operations, with the largest difference in blur and the smallest in saving. However, the algorithms and API behavior are not identical in every case, so the ratios should be interpreted as practical reference comparisons.
 

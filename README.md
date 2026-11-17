@@ -57,7 +57,7 @@ values.setElement(3.5f, {0, 1});
 float value = values.getElement({0, 1});
 ```
 
-The tensor supports element access, filling, reshape, addition, subtraction, and element-wise multiplication. It does not implement matrix multiplication.
+The tensor supports element access, filling, reshape, addition, subtraction, and element-wise multiplication.
 
 ## Image Filter Showcase
 

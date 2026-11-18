@@ -52,7 +52,7 @@ The test suite covers:
 
 Test results are exported in CSV format using the required submission columns.
 
-**Results file:** [Test Results](../testcase_results.csv)
+**Results file:** [Test Results](testcase_results.csv)
 **Testing Code:** [Test Code](../testcases.cpp)
 
 ## Summary Table

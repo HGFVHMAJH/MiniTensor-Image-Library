@@ -37,6 +37,10 @@ The benchmark environment used for development and testing:
 
 [View Benchmark CSV](tensor_benchmark.csv)
 
+Results of operations in Pytorch
+[View Refrence CSV](tensor_pytorch.csv)
+
+
 ## 5. Test Results
 
 The project includes functional test results for the Mini Tensor library.

@@ -1,0 +1,22 @@
+PB_ID,Shape,Operation,Average (ms),Median (ms),Checksum
+PB01,"{100,100}","Tensor Creation / Allocation",0.00064130,0.00061150,0
+PB01,"{100,100}","Tensor Destruction / Deallocation",0.00009897,0.00009100,0
+PB02,"{1000,1000}","Tensor Creation / Allocation",0.08758370,0.08586000,0
+PB02,"{1000,1000}","Tensor Destruction / Deallocation",0.00018303,0.00009000,0
+PB03,"{4000,4000}","Tensor Creation / Allocation",34.65429243,32.48431850,0
+PB03,"{4000,4000}","Tensor Destruction / Deallocation",4.15609040,3.74789400,0
+PB04,"{1000,1000}","Sequential Read (Checksum)",0.19646727,0.18730950,35000000
+PB05,"{1000,1000}","Seeded Random Read (100000 reads)",0.51013440,0.50427600,3500000
+PB06,"{1000,1000}","Element-wise Addition",0.24952497,0.25320250,3000000
+PB07,"{1000,1000}","Element-wise Subtraction",0.18205350,0.18187900,4000000
+PB08,"{1000,1000}","Element-wise Multiplication",0.19684030,0.17809750,6000000
+PB06,"{100,100}","Element-wise Addition",0.00119927,0.00119300,30000
+PB07,"{100,100}","Element-wise Subtraction",0.00178937,0.00177350,40000
+PB08,"{100,100}","Element-wise Multiplication",0.00188170,0.00189350,60000
+PB06,"{500,500}","Element-wise Addition",0.04075173,0.03843650,750000
+PB07,"{500,500}","Element-wise Subtraction",0.06301947,0.04312600,1000000
+PB08,"{500,500}","Element-wise Multiplication",0.03889920,0.03674800,1500000
+PB06,"{4000,4000}","Element-wise Addition",5.82160677,5.74114350,48000000
+PB07,"{4000,4000}","Element-wise Subtraction",6.68094317,6.48503200,64000000
+PB08,"{4000,4000}","Element-wise Multiplication",6.34164347,5.98656150,96000000
+PB12,"{1000,1000}","Reshape {1000,1000} to {100,10000}",0.00003577,0.00003000,1000000

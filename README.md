@@ -17,7 +17,7 @@ Pixels are stored in memory as RGB values in a tensor of shape `{height, width, 
 ## Build
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra -pedantic main.cpp Image.cpp -o image_filters
+g++ -std=c++17 -O3 -Wall -Wextra -pedantic main.cpp Image.cpp -o image_filters
 ```
 
 Place `yard.bmp` in the program's working directory, then run:
